@@ -1,0 +1,11 @@
+LICENSE
+test
+.stack-work
+_cache/
+_site/
+posts/
+*.html
+!index.html
+!archive.html
+!templates/*
+CNAME

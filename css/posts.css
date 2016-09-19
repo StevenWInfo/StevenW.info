@@ -1,0 +1,52 @@
+.post-section {
+    clear: left;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 0.5em;
+    padding-bottom:2em;
+    /*background-color: #BDE9F0;*/
+    background-color: silver;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.post-list {
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    /*
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    */
+    padding: 0;
+    margin: 1em 10em;
+}
+
+.post-list-item {
+    background-color: silver;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 0.5em;
+    padding-bottom:2em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.post-list-link {
+    text-decoration: underline;
+    /*color: black;*/
+}
+
+.post-title {
+    font-size: 1 em;
+    color: #333;
+}
+
+.post-description {
+    color: #4e4e4e;
+    font-size: 0.97 em;
+}

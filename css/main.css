@@ -1,0 +1,98 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    /*padding: 0;*/
+    padding-bottom: 4rem;
+    min-height: 100%;
+    position: relative;
+}
+
+.default {
+    background-color: black;
+    color: white;
+    font-family: 'Dosis', Helvetica;
+}
+
+.default-text {
+    text-decoration: none;
+    color: white;
+}
+
+.default-list {
+    list-style: none;
+}
+
+.header-title {
+    color: #ffffff;
+    font: 3em 'Dosis', Helvetica;
+}
+
+.banner {
+    /*
+    margin-top: 1em;
+    margin-left: 10em;
+    margin-right:10em;
+    margin-bottom: 0em;
+    */
+    position: relative;
+    margin: 0;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    /*
+    left:50%;
+    transform: translate(-50%, 0%);
+    */
+}
+
+.banner-left {
+    position: absolute;
+    top: 50%;
+    left:48.5%;
+    transform: translate(-100%, -50%);
+    text-align: right;
+}
+
+.banner-middle {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    border: 2px solid white;
+    padding: 2em 0px;
+    transform: translate(-50%, -50%);
+    border-color: gray;
+}
+
+.banner-right {
+    position: absolute;
+    top: 50%;
+    left:49%;
+    transform: translate(0%, -50%);
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*
+    margin: 0;
+    margin-left: 10em;
+    margin-right: 10em;
+    */
+    padding-top: 0em;
+    padding-bottom: 0em;
+    padding-left: 1em;
+    bottom: 0%;
+}
