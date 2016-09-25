@@ -10,7 +10,7 @@ import Hakyll
 -- Perhaps I should break out some stuff into other files/modules.
 
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith config $ do
 
     match "templates/*" $ compile templateCompiler
 
@@ -59,3 +59,8 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" indexContext
                 >>= loadAndApplyTemplate "templates/boilerplate.html" indexContext
                 >>= relativizeUrls
+
+config :: Configuration
+config = defaultConfiguration
+    { deployCommand = "rm -r ../static/* && cp -r _site/* ../static/"
+    }
