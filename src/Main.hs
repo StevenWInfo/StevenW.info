@@ -42,22 +42,22 @@ main = hakyllWith config $ do
         route idRoute
         compile $ do
             posts <- fmap (take 5) . recentFirst =<< loadAll "posts/*"
-            let indexContext = listField "posts" defaultContext (return posts) <> defaultContext
+            let postListingCtx = listField "posts" defaultContext (return posts) <> defaultContext
             getResourceBody
-                >>= applyAsTemplate indexContext
-                >>= loadAndApplyTemplate "templates/default.html" indexContext
-                >>= loadAndApplyTemplate "templates/boilerplate.html" indexContext
+                >>= applyAsTemplate postListingCtx
+                >>= loadAndApplyTemplate "templates/default.html" postListingCtx
+                >>= loadAndApplyTemplate "templates/boilerplate.html" postListingCtx
                 >>= relativizeUrls
                 
     match "archive.html" $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
-            let indexContext = listField "posts" defaultContext (return posts) <> defaultContext
+            let postListingCtx = listField "posts" defaultContext (return posts) <> defaultContext
             getResourceBody
-                >>= applyAsTemplate indexContext
-                >>= loadAndApplyTemplate "templates/default.html" indexContext
-                >>= loadAndApplyTemplate "templates/boilerplate.html" indexContext
+                >>= applyAsTemplate postListingCtx
+                >>= loadAndApplyTemplate "templates/default.html" postListingCtx
+                >>= loadAndApplyTemplate "templates/boilerplate.html" postListingCtx
                 >>= relativizeUrls
 
 config :: Configuration
