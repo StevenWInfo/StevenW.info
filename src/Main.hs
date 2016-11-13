@@ -44,7 +44,6 @@ main = hakyllWith config $ do
             posts <- fmap (take 5) . recentFirst =<< loadAll "posts/*"
             let postListingCtx = listField "posts" defaultContext (return posts) <> defaultContext
             getResourceBody
-                >>= applyAsTemplate postListingCtx
                 >>= loadAndApplyTemplate "templates/default.html" postListingCtx
                 >>= loadAndApplyTemplate "templates/boilerplate.html" postListingCtx
                 >>= relativizeUrls
@@ -55,7 +54,6 @@ main = hakyllWith config $ do
             posts <- recentFirst =<< loadAll "posts/*"
             let postListingCtx = listField "posts" defaultContext (return posts) <> defaultContext
             getResourceBody
-                >>= applyAsTemplate postListingCtx
                 >>= loadAndApplyTemplate "templates/default.html" postListingCtx
                 >>= loadAndApplyTemplate "templates/boilerplate.html" postListingCtx
                 >>= relativizeUrls
