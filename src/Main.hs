@@ -60,6 +60,10 @@ main = hakyllWith config $ do
                 >>= loadAndApplyTemplate "templates/boilerplate.html" postListingCtx
                 >>= relativizeUrls
 
+    match "haskell-soda/**" $ do
+        route idRoute
+        compile copyFileCompiler
+
 config :: Configuration
 config = defaultConfiguration
     { deployCommand = "rm -r ../static/* && cp -r _site/* ../static/"
